@@ -43,7 +43,7 @@ const exchangeRates = async () => {
     let data = await response.json()
     console.log(data);
 
-    let rate = data.fromCurr[toCurr.value.toLowerCase()];
+    let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
 
     let finalAmount = amtVal * rate;
 
